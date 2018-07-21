@@ -1,21 +1,26 @@
 const path = require('path')
+const { CheckerPlugin } = require('awesome-typescript-loader')
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  devtool: 'inline-source-map',
+  entry: './src/index.tsx',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public/js/'),
   },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js'],
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
-        use: 'babel-loader',
+        test: /\.tsx?$/,
+        use: 'awesome-typescript-loader',
       },
     ],
   },
-  resolve: {
-    extensions: ['.js'],
-  },
+  plugins: [
+    new CheckerPlugin()
+  ]
 }

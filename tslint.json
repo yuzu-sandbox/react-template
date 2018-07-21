@@ -1,0 +1,21 @@
+{
+  "defaultSeverity": "error",
+  "extends": [],
+  "jsRules": {},
+  "rules": {
+    "prettier": [true],
+    "encoding": true,
+    "no-unused-expression": true,
+    "no-duplicate-variable": true,
+    "forin": false,
+    "curly": true,
+    "class-name": true,
+    "triple-equals": true,
+    "no-var-keyword": true,
+    "no-bitwise": true,
+    "eofline": true,
+    "linebreak-style": [true, "LF"],
+    "arrow-return-shorthand": [true]
+  },
+  "rulesDirectory": ["tslint-plugin-prettier"]
+}
